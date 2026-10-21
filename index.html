@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para alguien muy especial ❤️</title>
+    
+    <!-- Fuentes románticas y elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Conecta tu archivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Canvas para el efecto de salto espacial (estrellas) -->
+    <canvas id="canvas-estrellas"></canvas>
+
+    <!-- Overlay que parpadeará durante el salto espacial -->
+    <div id="pantalla-salto"></div>
+
+    <!-- Botón de Control de Música (Arriba a la derecha) -->
+    <button id="btn-audio" class="control-audio hidden">🎵 Sonando</button>
+
+    <!-- Canción 'Understand' de keshi (Oculto) -->
+    <!-- RECOMENDACIÓN: Descarga la canción, guárdala en tu carpeta como 'understand.mp3' y usa src="understand.mp3" -->
+    <audio id="musica-fondo" loop>
+        <source src="understand.mp3" type="audio/mpeg">
+        <!-- Reemplaza el src con tu archivo 'understand.mp3' para usar keshi -->
+    </audio>
+
+    <div class="contenedor-principal">
+
+        <!-- ==========================================
+             PANTALLA 1: BIENVENIDA
+             ========================================== -->
+        <section id="pantalla-inicio" class="pantalla activa">
+            <h1 class="titulo-cursivo">Mi princesita... ❤️</h1>
+            <p class="texto-intro">
+                He creado este pequeño rincón para viajar juntos por algunos de nuestros momentos y contarte todo lo bello que provocas desde que llegaste a mi vida.
+            </p>
+            <p class="texto-instruccion">(Sube el volumen te va a encantar 🎧)</p>
+            <button id="btn-comenzar" class="boton-principal">Comenzar viaje ✨</button>
+        </section>
+
+        <!-- ==========================================
+             PANTALLA 2: GALERÍA DE FOTOS Y VERSÍCULOS
+             ========================================== -->
+        <section id="pantalla-galeria" class="pantalla">
+            <span id="contador-fotos" class="contador">Momento 1 de 11</span>
+
+            <!-- Marco tipo Polaroid -->
+            <div id="contenedor-polaroid" class="marco-foto">
+                <img id="imagen-recuerdo" src="" alt="Nuestro recuerdo">
+                <h3 id="titulo-recuerdo" class="titulo-foto">Título del momento</h3>
+            </div>
+
+            <p id="descripcion-recuerdo" class="descripcion-sentimiento">
+                Aquí irá lo que sentiste en ese momento...
+            </p>
+
+            <!-- Versículo bíblico -->
+            <div class="caja-versiculo">
+                <p id="texto-versiculo" class="versiculo">"Versículo..."</p>
+                <span id="cita-versiculo" class="cita">Cita</span>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="botones-navegacion">
+                <button id="btn-anterior" class="boton-secundario">⬅ Anterior</button>
+                <button id="btn-siguiente" class="boton-principal">Siguiente ➡</button>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PANTALLA 3: LA GRAN PREGUNTA
+             ========================================== -->
+        <section id="pantalla-propuesta" class="pantalla">
+            <h2 class="titulo-cursivo">Llegamos al final de este viaje...</h2>
+            
+            <p class="texto-intro">
+                Cada momento contigo ha sido una bendición de Dios. Me encanta quién eres, tu sonrisa y la paz que siento cuando estamos juntos.
+            </p>
+
+            <div class="caja-versiculo">
+                <p class="versiculo">"Mejores son dos que uno; porque tienen mejor paga de su trabajo. Porque si cayeren, el uno levantará a su compañero..."</p>
+                <span class="cita">Eclesiastés 4:9-10</span>
+            </div>
+
+            <h1 class="gran-pregunta">¿Puedo ser tu novio? ❤️</h1>
+
+            <div class="contenedor-respuestas">
+                <button id="btn-si" class="boton-si">¡SÍ, CLARO QUE SÍ! 💖</button>
+                <button id="btn-no" class="boton-no">Lo pensaré... 🙈</button>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             PANTALLA 4: CELEBRACIÓN (CUANDO DICE SÍ)
+             ========================================== -->
+        <section id="pantalla-celebracion" class="pantalla">
+            <h1 class="titulo-cursivo">¡Me haces el hombre más feliz! 🥰🎉</h1>
+            <p class="texto-intro">
+                Prometo cuidarte, respetarte y construir contigo una historia hermosa con Dios en el centro.
+            </p>
+            <div class="caja-versiculo">
+                <p class="versiculo">"Y sobre todas estas cosas vestíos de amor, que es el vínculo perfecto."</p>
+                <span class="cita">Colosenses 3:14</span>
+            </div>
+            <div class="icono-gigante">💑✨❤️</div>
+        </section>
+
+    </div>
+
+    <!-- Conecta tu archivo de lógica JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
